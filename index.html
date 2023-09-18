@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Farb-Ratespiel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="game-title">Color Guessing Game</h1>
+
+    <div class="row mt-5 pt">
+      <div class="col">
+        <h3>Gesuchter Farbcode:</h3>
+        <h1 id="color-code" style="color: #4287f5;"></h1>
+      </div>
+    </div>
+
+    <div class="row mt-3 pt">
+      <div class="col">
+        <h3>Farbfelder:</h3>
+        <div class="row">
+          <div class="col-4">
+            <div id="color-box-1" class="color-box" data-is-correct="false"></div>
+          </div>
+          <div class="col-4">
+            <div id="color-box-2" class="color-box" data-is-correct="false"></div>
+          </div>
+          <div class="col-4">
+            <div id="color-box-3" class="color-box" data-is-correct="false"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="score-container">
+      <h3>Punktestand:</h3>
+      <div style="background-color: #4287f5; color: #fff; padding: 5px; border-radius: 3px;">
+        <h2 id="score" style="text-align: center;">0</h2>
+      </div>
+      <div class="timer-container">
+        <h3>Timer:</h3>
+        <h1 id="timer">5</h1>
+      </div>
+    </div>
+    </div>
+
+  <div class="modal fade" id="result-modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modal-message"></p>
+        </div>
+        <div class="modal-footer">
+          <button id="new-game-button" class="btn btn-primary">Neues Spiel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
